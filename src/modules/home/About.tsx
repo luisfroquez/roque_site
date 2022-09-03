@@ -27,12 +27,12 @@ const About = () => {
         <Box
           border="1px"
           borderColor="#40404180"
-          w={{ base: '80%', md: '60em' }}
+          w={{ base: '90%', md: '60em' }}
           minH="22em"
           borderRadius="2.5em"
           flexDirection={{ base: 'column', md: 'row' }}
           display="flex"
-          p="2em"
+          p={{base:0, md:"2em"}}
         >
           <Box
             w={{ base: '100%', md: '50%' }}
@@ -53,12 +53,14 @@ const About = () => {
             h="fill"
             justifyContent="space-between"
             flexDir="column"
-            p={{ base: '0.25em', md: '1em' }}
+            p={{ base:0, md: '1em' }}
           >
             <VStack
               align="flex-end"
               w="100%"
               spacing={0}
+              px={{base:"2em", md: 0}}
+              overflow="hidden"
               pos="relative"
               h="6em"
               justify="flex-end"
@@ -88,6 +90,8 @@ const About = () => {
               spacing="2em"
               justify="flex-start"
               mt={{ base: '2em', md: '0' }}
+              px={{base:"2em", md: 0}}
+              pb={{base:"2em", md: 0}}
             >
               <Text lineHeight="0.85rem" fontSize="0.85rem">
                 I'm a front end developer & graphic designer based in Buenos

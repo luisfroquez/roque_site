@@ -27,7 +27,8 @@ const Navbar = () => {
       bg={bg}
       justifyContent="space-between"
       p="1em"
-      width="48em"
+      w="90%"
+      maxWidth="48em"
       alignItems="center"
       pos="absolute"
       top="3em"

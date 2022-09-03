@@ -15,7 +15,8 @@ const Layout = ({ children }: any) => {
       color={color}
       transition="all"
       transitionDuration="1s"
-      overflow="auto"
+      overflowY="auto"
+      overflowX="hidden"
       align="center"
       scrollBehavior="smooth"
     >

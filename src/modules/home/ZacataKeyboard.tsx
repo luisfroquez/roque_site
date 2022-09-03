@@ -9,7 +9,7 @@ const ZacataKeyboard = () => {
 
 
   return (
-    <Center borderRadius="2em" h="30em" w="60em" pos="relative" p={0}>
+    <Center borderRadius="2em" h="30em" maxW="60em" w="90%" pos="relative" p={0}>
       {/* <iframe
         src="https://my.spline.design/untitled-6af3e88c6cf44304bff274b9ba75447f/"
         frameBorder="0"
