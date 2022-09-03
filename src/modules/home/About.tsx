@@ -10,6 +10,8 @@ import {
 import styles from '../../styles/modules/home/about.module.css'
 
 const About = () => {
+  const color = useColorModeValue('black', 'gray.100')
+  const aboutColor=useColorModeValue('gray.50', 'gray.500')
   return (
     <Center
       as="div"
@@ -18,14 +20,14 @@ const About = () => {
       maxH="100vh"
       w="100%"
       flexDir="column"
+      color={color}
       justifyContent="space-between"
-      color="gray.100"
     >
       <Center h="100%" w="100%" mt="8em">
         <Box
           border="1px"
           borderColor="#40404180"
-          w={{ base: '80%', md: "60em" }}
+          w={{ base: '80%', md: '60em' }}
           minH="22em"
           borderRadius="2.5em"
           flexDirection={{ base: 'column', md: 'row' }}
@@ -72,7 +74,7 @@ const About = () => {
               <Text
                 fontSize={{ base: '8rem', md: '10rem' }}
                 fontWeight="bold"
-                color="gray.500"
+                color={aboutColor}
                 pos="absolute"
                 bottom="-0.48em"
                 alignSelf={{ base: 'center', md: '' }}

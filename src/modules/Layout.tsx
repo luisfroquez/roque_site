@@ -4,7 +4,7 @@ import Navbar from './navbar/Navbar'
 const Layout = ({ children }: any) => {
   const color = useColorModeValue('black', 'white')
   const bg = useColorModeValue('white', 'black')
-  const [isLTmd] = useMediaQuery('(min-width: 48em)')
+  // const [isLTmd] = useMediaQuery('(min-width: 48em)')
 
   return (
     <Flex
