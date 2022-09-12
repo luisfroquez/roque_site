@@ -13,7 +13,7 @@ export const Button = {
     sm: {
       px: 2,
       py: 1,
-      borderRadius: "2em",
+      borderRadius: '2em'
     }
   },
   // styles for different visual variants ("outline", "solid")
@@ -22,18 +22,19 @@ export const Button = {
       color: 'black',
       fontWeight: 'normal',
       _hover: {
-        bg: darken('white', 5)
+        bg: darken('white', 5),
+        borderRadius: '2em'
       },
-      _focus: {
-        borderColor: 'black',
-        paddingBottom: 2,
-        borderBottomWidth: 1
-      },
-      _active: {
-        borderColor: 'black',
-        paddingBottom: 2,
-        borderBottomWidth: 1
-      }
+      // _focus: {
+      //   borderColor: 'black',
+      //   paddingBottom: 2,
+      //   borderBottomWidth: 1
+      // },
+      // _active: {
+      //   borderColor: 'black',
+      //   paddingBottom: 2,
+      //   borderBottomWidth: 1
+      // }
     },
     dark: {
       color: 'white',
@@ -42,23 +43,23 @@ export const Button = {
       _hover: {
         bg: whiten('black', 10)
       },
-      _focus: {
-        borderColor: 'white',
-        paddingBottom: 2,
-        borderBottomWidth: 1,
-        borderRadius: 0,
-      },
-      _active: {
-        borderColor: 'white',
-        paddingBottom: 2,
-        borderBottomWidth: 1,
-        borderRadius: 0,
-      }
+      // _focus: {
+      //   borderColor: 'white',
+      //   paddingBottom: 2,
+      //   borderBottomWidth: 1,
+      //   borderRadius: 0
+      // },
+      // _active: {
+      //   borderColor: 'white',
+      //   paddingBottom: 2,
+      //   borderBottomWidth: 1,
+      //   borderRadius: 0
+      // }
     }
   },
   // default values for `size` and `variant`
   defaultProps: {
     size: 'sm',
-    variant: '',
+    variant: ''
   }
 }
