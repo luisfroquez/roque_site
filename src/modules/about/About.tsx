@@ -5,13 +5,15 @@ import {
   Text,
   useColorModeValue,
   VStack,
-  Flex
+  Flex,
+  Stack
 } from '@chakra-ui/react'
 import styles from '../../styles/modules/home/about.module.css'
+import ZacataStack from './ZacataStack'
 
 const About = () => {
   const color = useColorModeValue('black', 'gray.100')
-  const aboutColor=useColorModeValue('gray.50', 'gray.500')
+  const aboutColor = useColorModeValue('gray.50', 'gray.500')
   return (
     <Center
       as="div"
@@ -32,7 +34,7 @@ const About = () => {
           borderRadius="2.5em"
           flexDirection={{ base: 'column', md: 'row' }}
           display="flex"
-          p={{base:0, md:"2em"}}
+          p={{ base: 0, md: '2em' }}
         >
           <Box
             w={{ base: '100%', md: '50%' }}
@@ -53,13 +55,13 @@ const About = () => {
             h="fill"
             justifyContent="space-between"
             flexDir="column"
-            p={{ base:0, md: '1em' }}
+            p={{ base: 0, md: '1em' }}
           >
             <VStack
               align="flex-end"
               w="100%"
               spacing={0}
-              px={{base:"2em", md: 0}}
+              px={{ base: '2em', md: 0 }}
               overflow="hidden"
               pos="relative"
               h="6em"
@@ -90,8 +92,8 @@ const About = () => {
               spacing="2em"
               justify="flex-start"
               mt={{ base: '2em', md: '0' }}
-              px={{base:"2em", md: 0}}
-              pb={{base:"2em", md: 0}}
+              px={{ base: '2em', md: 0 }}
+              pb={{ base: '2em', md: 0 }}
             >
               <Text lineHeight="0.85rem" fontSize="0.85rem">
                 I'm a front end developer & graphic designer based in Buenos
@@ -110,11 +112,7 @@ const About = () => {
           </Flex>
         </Box>
       </Center>
-      <Center w="100%" mb="3em">
-        <Center w="36em" minH="4em">
-          <p>stack</p>
-        </Center>
-      </Center>
+      <ZacataStack />
     </Center>
   )
 }

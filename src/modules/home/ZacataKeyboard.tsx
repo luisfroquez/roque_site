@@ -17,7 +17,6 @@ const ZacataKeyboard = () => {
         height="100%"
         style={{ borderRadius: '3em', padding: '1em' }}
       ></iframe> */}
-      <div></div>
       <Suspense fallback={<div>Something nice is loading here...</div>}>
         <Spline scene="https://prod.spline.design/Qqprx1SAjggWZzgH/scene.splinecode" style={{borderRadius:"2.5em", margin:0}}/>
       </Suspense>

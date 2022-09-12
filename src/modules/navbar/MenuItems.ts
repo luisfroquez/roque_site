@@ -10,7 +10,7 @@ export const MenuItems: Menuitems[] = [
   },
   {
     name: 'Work',
-    link: '#Work'
+    link: '#work'
   },
   {
     name: 'Contact',
