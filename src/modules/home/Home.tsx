@@ -9,7 +9,7 @@ const Home = () => {
         <Heading fontSize="3rem" lineHeight="3rem">
           Hello, I'm Luis.
         </Heading>
-        <Text fontSize="1rem">{CoolFrontend()}</Text>
+        <Text as="div" fontSize="1rem">{CoolFrontend()}</Text>
       </VStack>
       <ZacataKeyboard />
     </VStack>

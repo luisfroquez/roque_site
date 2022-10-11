@@ -16,8 +16,7 @@ const Work = () => {
     <Center
       as="div"
       id="work"
-      minH="100vh"
-      w="100%"
+      w={{ base: '90%', md: '60em' }}
       flexDir="column"
       color={color}
       justifyContent="flex-start"

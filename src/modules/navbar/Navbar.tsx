@@ -40,11 +40,17 @@ const Navbar = () => {
         {/* <Button fontWeight="normal" fontSize={['md', 'xl']} p={0}>
           LUIS<Text fontWeight="extrabold">ROQUE</Text>
         </Button> */}
-        <Link href="#home">
-        <Center cursor="pointer" bg="gray.900" w="40px"  h="40px" borderRadius={100} color="white" p="6px">
+        <Center
+          cursor="pointer"
+          bg="gray.900"
+          w="40px"
+          h="40px"
+          borderRadius={100}
+          color="white"
+          p="6px"
+        >
           <ZacataLogo />
         </Center>
-        </Link>
       </Link>
       <HStack>
         <HStack>

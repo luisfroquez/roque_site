@@ -1,7 +1,8 @@
 import Head from 'next/head'
-import About from '../modules/about/About'
 import Home from '../modules/home/Home'
-import Work from '../modules/home/Work'
+import About from '../modules/home/about/About'
+import Work from '../modules/home/work/Work'
+import Contact from '../modules/home/contact/Contact'
 
 const Index = () => {
   return (
@@ -12,6 +13,7 @@ const Index = () => {
       <Home />
       <About />
       <Work />
+      <Contact />
     </>
   )
 }

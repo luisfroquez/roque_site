@@ -8,7 +8,7 @@ import {
   Flex,
   Stack
 } from '@chakra-ui/react'
-import styles from '../../styles/modules/home/about.module.css'
+import styles from '../../../styles/modules/home/about.module.css'
 import ZacataStack from './ZacataStack'
 
 const About = () => {
