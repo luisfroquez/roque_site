@@ -123,7 +123,7 @@ const WorkGrid = () => {
       >
         <Image
           ref={image1}
-          src="/images/home/obsidian-web.png"
+          src="/images/home/Obsidian-web.png"
           w={{ base: '95%', md: '70%' }}
           transition="all 0.5s"
           zIndex={2}
@@ -168,7 +168,7 @@ const WorkGrid = () => {
       >
         <Image
           ref={image2}
-          src="/images/home/eclipse-web.png"
+          src="/images/home/Eclipse-web.png"
           w={{ base: '95%', md: '70%' }}
           transition="all 0.5s"
           zIndex={2}
