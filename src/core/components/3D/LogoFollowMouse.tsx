@@ -1,6 +1,6 @@
 import { Center, ContainerProps, useColorModeValue } from '@chakra-ui/react'
 import React, { useRef } from 'react'
-import { RoqueLogo } from '../../public/svg/RoqueLogo'
+import { RoqueLogo } from 'public/svg/RoqueLogo'
 
 const LogoFollowMouse = (containerProps:ContainerProps) => {
   const color = useColorModeValue('black', 'gray.100')

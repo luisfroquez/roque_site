@@ -1,6 +1,6 @@
-import { Center, ColorMode, HStack, VStack } from '@chakra-ui/react'
-import styles from './zacataStack.module.css'
-import { DARK_BG, LIGHT_BG } from '../../utils/constants'
+import { Center, ColorMode, HStack } from '@chakra-ui/react'
+import styles from 'core/styles/modules/home/zacataStack.module.css'
+import { DARK_BG, LIGHT_BG } from 'core/utils/constants'
 
 const ZacataStack = ({ colorMode }: { colorMode: ColorMode }) => {
   const items = [

@@ -3,12 +3,10 @@ import {
   ColorMode,
   Grid,
   GridItem,
-  GridItemProps,
   Image,
   Text,
-  useColorModeValue
 } from '@chakra-ui/react'
-import { DARK_BG, LIGHT_BG } from '../../utils/constants'
+import { DARK_BG, LIGHT_BG } from 'core/utils/constants'
 
 const WorkGrid = ({ colorMode }: { colorMode: ColorMode }) => {
   return (

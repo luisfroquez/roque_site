@@ -12,9 +12,9 @@ import { HiOutlineMenuAlt4 } from 'react-icons/hi'
 import Link from 'next/link'
 import { ColorModeToggle } from './ThemeToggle/ColorModeToggle'
 import Socials from './Socials'
-import { ZacataLogo } from '../../components/Icons/ZacataLogo'
+import { ZacataLogo } from '@/public/Icons/ZacataLogo'
 import { AnimatePresence } from 'framer-motion'
-import SlideIn from '../../components/Animations/SlideIn'
+import SlideIn from 'core/components/Animations/SlideIn'
 import { useEffect, useState } from 'react'
 
 const Navbar = () => {

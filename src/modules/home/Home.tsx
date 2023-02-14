@@ -8,15 +8,15 @@ import {
   Text,
   VStack
 } from '@chakra-ui/react'
-import { HiChevronDown } from 'react-icons/hi'
-import SlideIn from '../../components/Animations/SlideIn'
-import styles from '../../styles/modules/home/home.module.css'
+import SlideIn from 'core/components/Animations/SlideIn'
 import {
   DARK_BG,
   HOME_DARK_BG_GRADIENT,
   HOME_LIGHT_BG_GRADIENT,
   LIGHT_BG
-} from '../../utils/constants'
+} from 'core/utils/constants'
+import { HiChevronDown } from 'react-icons/hi'
+import styles from 'core/styles/modules/home/home.module.css'
 
 const texts = [
   'Frontend developer',
@@ -26,6 +26,7 @@ const texts = [
 ]
 
 const Home = ({ colorMode }: { colorMode: ColorMode }) => {
+
   const handleClickScroll = () => {
     const element = document.getElementById('about')
     if (element) {

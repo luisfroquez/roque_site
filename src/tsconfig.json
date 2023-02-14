@@ -8,11 +8,7 @@
     "forceConsistentCasingInFileNames": true,
     "isolatedModules": true,
     "jsx": "preserve",
-    "lib": [
-      "dom",
-      "dom.iterable",
-      "esnext"
-    ],
+    "lib": ["dom", "dom.iterable", "esnext"],
     "module": "esnext",
     "moduleResolution": "node",
     "noEmit": true,
@@ -24,14 +20,23 @@
     "sourceMap": true,
     "strict": true,
     "target": "es2018",
-    "incremental": true
+    "incremental": true,
+    "baseUrl": ".",
+    "paths": {
+      "@/components/*": ["src/core/components/*"],
+      "@/types/*": ["src/core/types/*"],
+      "@/utils/*": ["src/core/utils/*"],
+      "@/modules/*": ["src/modules/*"],
+      "@/core/*": ["src/core/*"],
+      "@/public/*": ["public/*"],
+      "@/api/*": ["src/generated-sources/api/*"]
+    }
   },
   "include": [
     "next-env.d.ts",
     "**/*.ts",
-    "**/*.tsx"
-, "components/Home/coolFrontend.js"  ],
-  "exclude": [
-    "node_modules"
-  ]
+    "**/*.tsx",
+    "components/Home/coolFrontend.js"
+  ],
+  "exclude": ["node_modules"]
 }

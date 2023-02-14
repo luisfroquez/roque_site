@@ -1,14 +1,11 @@
 import {
   Center,
   ColorMode,
-  Flex,
   Heading,
-  Text,
-  useColorMode,
   VStack
 } from '@chakra-ui/react'
 import React from 'react'
-import { DARK_BG, LIGHT_BG } from '../../utils/constants'
+import { DARK_BG, LIGHT_BG } from 'core/utils/constants'
 import WorkGrid from './WorkGrid'
 
 const Work = ({ colorMode }: { colorMode: ColorMode }) => {

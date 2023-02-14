@@ -1,5 +1,6 @@
 import { ColorMode, Flex, Text } from '@chakra-ui/react'
-import { LIGHT_BG, DARK_BG } from '../../utils/constants'
+import { DARK_BG, LIGHT_BG } from 'core/utils/constants'
+
 
 const Quote = ({ colorMode }: { colorMode: ColorMode }) => {
   return (

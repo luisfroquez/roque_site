@@ -1,5 +1,4 @@
 import { Flex, useColorModeValue, useMediaQuery } from '@chakra-ui/react'
-import { useEffect } from 'react'
 import Navbar from './navbar/Navbar'
 
 const Layout = ({ children }: any) => {

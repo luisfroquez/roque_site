@@ -1,13 +1,13 @@
-import '../styles/globals.css'
+import 'core/styles/globals.css'
 import { AppProps } from 'next/app'
 import dynamic from 'next/dynamic'
 import { useEffect, useState } from 'react'
 import { ChakraProvider } from '@chakra-ui/react'
-import { AnimatePresence, motion } from 'framer-motion'
-import Layout from '../modules/Layout'
-import { theme } from '../theme/theme'
+import { motion } from 'framer-motion'
+import Layout from 'modules/Layout'
+import { theme } from 'core/theme/theme'
 
-const LogoSpiner = dynamic(() => import('../components/Loader/LogoSpiner'))
+const LogoSpiner = dynamic(() => import('core/components/Loader/LogoSpiner'))
 
 function MyApp({ Component, pageProps, router }: AppProps) {
   const [isMounted, setIsMounted] = useState(false)

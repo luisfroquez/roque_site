@@ -6,14 +6,14 @@ import {
   Text,
   HStack
 } from '@chakra-ui/react'
-import SlideIn from '../../components/Animations/SlideIn'
-import { DARK_BG, HOME_DARK_BG_GRADIENT, HOME_LIGHT_BG_GRADIENT, LIGHT_BG } from '../../utils/constants'
+import SlideIn from 'core/components/Animations/SlideIn'
+import { DARK_BG, HOME_DARK_BG_GRADIENT, HOME_LIGHT_BG_GRADIENT, LIGHT_BG } from 'core/utils/constants'
 // import CustomGlobe from '../../components/3D/CustomGlobe'
 import { HiChevronRight } from 'react-icons/hi'
 
 import dynamic from 'next/dynamic'
-import LogoFollowMouse from '../../components/3D/LogoFollowMouse'
-const CustomGlobe = dynamic(() => import('../../components/3D/CustomGlobe'), {
+import LogoFollowMouse from 'core/components/3D/LogoFollowMouse'
+const CustomGlobe = dynamic(() => import('core/components/3D/CustomGlobe'), {
   ssr: false
 })
 
