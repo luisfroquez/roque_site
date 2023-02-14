@@ -1,5 +1,6 @@
 import { Center, useColorMode, useColorModeValue } from '@chakra-ui/react'
 import { motion } from 'framer-motion'
+import SlideIn from '../Animations/SlideIn'
 
 const LogoSpiner = () => {
   const color = useColorModeValue('black', 'white')

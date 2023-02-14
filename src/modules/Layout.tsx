@@ -1,24 +1,28 @@
 import { Flex, useColorModeValue, useMediaQuery } from '@chakra-ui/react'
+import { useEffect } from 'react'
 import Navbar from './navbar/Navbar'
 
 const Layout = ({ children }: any) => {
-  const color = useColorModeValue('black', 'white')
-  const bg = useColorModeValue('white', 'black')
-  // const [isLTmd] = useMediaQuery('(min-width: 48em)')
+  const color = useColorModeValue('gray.900', 'gray.50')
+  const bg = useColorModeValue('gray.50', 'black')
 
   return (
     <Flex
+      id="main"
       flexDir="column"
       w="100vw"
       h="100vh"
-      bg={bg}
+      backgroundColor={bg}
       color={color}
       transition="all"
+      transitionTimingFunction="ease-in-out"
       transitionDuration="1s"
       overflowY="auto"
       overflowX="hidden"
       align="center"
       scrollBehavior="smooth"
+      p={2}
+      gap={2}
     >
       <Navbar />
       {children}

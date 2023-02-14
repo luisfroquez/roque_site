@@ -11,7 +11,8 @@ import {
 
 const config: ThemeConfig = {
   initialColorMode: 'dark',
-  useSystemColorMode: false
+  useSystemColorMode: false,
+  disableTransitionOnChange: false
 }
 
 export const breakpoints = {

@@ -1,18 +1,24 @@
 import Head from 'next/head'
 import Home from '../modules/home/Home'
-import About from '../modules/home/about/About'
-import Work from '../modules/home/work/Work'
-import Contact from '../modules/home/contact/Contact'
+import About from '../modules/home/About'
+import Work from '../modules/home/Work'
+import Contact from '../modules/home/Contact'
+import { useColorMode } from '@chakra-ui/react'
+import Quote from '../modules/home/Quote'
+import ZacataStack from '../modules/home/ZacataStack'
 
 const Index = () => {
+  const { colorMode } = useColorMode()
   return (
     <>
       <Head>
         <title>{"Roque's site"}</title>
       </Head>
-      <Home />
+      <Home colorMode={colorMode} />
       <About />
-      <Work />
+      <ZacataStack colorMode={colorMode} />
+      <Quote colorMode={colorMode} />
+      <Work colorMode={colorMode} />
       <Contact />
     </>
   )

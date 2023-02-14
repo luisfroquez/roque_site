@@ -6,7 +6,7 @@ import {
   VStack
 } from '@chakra-ui/react'
 import { useRef } from 'react'
-import { RoqueLogo } from '../../../public/svg/RoqueLogo'
+import { RoqueLogo } from '../../public/svg/RoqueLogo'
 
 const headingStyleProps = {
   transition: 'all 0.25s ease-out',

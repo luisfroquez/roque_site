@@ -3,7 +3,7 @@ import { AppProps } from 'next/app'
 import dynamic from 'next/dynamic'
 import { useEffect, useState } from 'react'
 import { ChakraProvider } from '@chakra-ui/react'
-import { motion } from 'framer-motion'
+import { AnimatePresence, motion } from 'framer-motion'
 import Layout from '../modules/Layout'
 import { theme } from '../theme/theme'
 
@@ -11,6 +11,7 @@ const LogoSpiner = dynamic(() => import('../components/Loader/LogoSpiner'))
 
 function MyApp({ Component, pageProps, router }: AppProps) {
   const [isMounted, setIsMounted] = useState(false)
+  const [showLoader, setShowLoader] = useState(true)
 
   const variants = {
     pageInitial: {
@@ -26,6 +27,9 @@ function MyApp({ Component, pageProps, router }: AppProps) {
 
   useEffect(() => {
     setIsMounted(true)
+    setTimeout(() => {
+      setShowLoader(false)
+    }, 4000)
   }, [])
 
   return (
@@ -36,12 +40,11 @@ function MyApp({ Component, pageProps, router }: AppProps) {
         key={router.route}
         variants={variants}
       >
-        {isMounted ? (
+        {showLoader && <LogoSpiner />}
+        {isMounted && (
           <Layout>
             <Component {...pageProps} />
           </Layout>
-        ) : (
-          <LogoSpiner />
         )}
       </motion.div>
     </ChakraProvider>

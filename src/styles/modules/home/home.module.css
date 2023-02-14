@@ -1,0 +1,11 @@
+.slider {
+  -webkit-animation: loop 50s infinite linear;
+  animation: loop 50s infinite linear;
+}
+
+@keyframes loop {
+  100% {
+    -webkit-transform: translateX(-100%);
+    transform: translateX(-100%);
+  }
+}

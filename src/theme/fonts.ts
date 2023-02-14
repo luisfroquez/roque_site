@@ -1,6 +1,6 @@
 export const fonts = {
-  body: 'Rajdhani, system-ui, sans-serif',
-  heading: 'Rajdhani, Georgia, serif',
+  body: 'Plus Jakarta Sans, system-ui, sans-serif',
+  heading: 'Plus Jakarta Sans, Georgia, serif',
   mono: 'Menlo, monospace'
 }
 
