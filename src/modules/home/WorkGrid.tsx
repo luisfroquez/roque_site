@@ -1,12 +1,12 @@
-import {
-  Box,
-  ColorMode,
-  Grid,
-  GridItem,
-  Image,
-  Text,
-} from '@chakra-ui/react'
+import { Box, ColorMode, Grid, GridItem, Text } from '@chakra-ui/react'
 import { DARK_BG, LIGHT_BG } from 'core/utils/constants'
+import Image from 'next/image'
+
+const works = [
+  { name: 'Obsidian', image: '/images/home/Obsidian-web.png' },
+  { name: 'SP Nutrition', image: '/images/home/SPNutrition-web.png' },
+  { name: 'Eclipse', image: '/images/home/Eclipse-web.png' }
+]
 
 const WorkGrid = ({ colorMode }: { colorMode: ColorMode }) => {
   return (
@@ -15,51 +15,47 @@ const WorkGrid = ({ colorMode }: { colorMode: ColorMode }) => {
       templateColumns={{ base: 'repeat(1, 1fr)', md: 'repeat(2, 1fr)' }}
       gap={2}
     >
-      <GridItem
-        h={{ base: 280, md: 350, lg: 500 }}
-        p={4}
-        display="flex"
-        alignItems="stretch"
-        justifyContent="center"
-        transition="all 0.5s"
-        cursor="pointer"
-        overflow="hidden"
-        pos="relative"
-        borderRadius={20}
-        border="2px"
-        borderColor={colorMode === 'light' ? LIGHT_BG : DARK_BG}
-      >
-        <Text
-          pos="relative"
-          zIndex={3}
-          alignSelf="flex-end"
-          justifySelf="flex-start"
-          w="100%"
-          fontSize="3xl"
-          fontWeight="bold"
-          lineHeight="none"
-          color="white"
-        >
-          Obsidian
-        </Text>
-
-        <Box
-          bg="linear-gradient(0deg, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0) 100%)"
-          height="100%"
-          w="100%"
-          pos="absolute"
-          zIndex={2}
-        />
-
-        <Image
-          src="https://framerusercontent.com/images/whQe7FnpfaBboVEPd6VPBqjmpaw.jpg"
+      {works.map((work, i) => (
+        <GridItem
+          key={i}
+          h={{ base: 280, md: 350, lg: 500 }}
+          p={4}
+          display="flex"
+          alignItems="stretch"
+          justifyContent="center"
           transition="all 0.5s"
-          top={0}
-          pos="absolute"
-          transform="auto"
-          scale={1.1}
-        />
-      </GridItem>
+          cursor="pointer"
+          overflow="hidden"
+          pos="relative"
+          borderRadius={20}
+          // border="2px"
+          // borderColor={colorMode === 'light' ? LIGHT_BG : DARK_BG}
+        >
+          <Text
+            pos="relative"
+            zIndex={3}
+            alignSelf="flex-end"
+            justifySelf="flex-start"
+            w="100%"
+            fontSize="xl"
+            fontWeight="bold"
+            lineHeight="none"
+            color="white"
+          >
+            {work.name}
+          </Text>
+
+          <Box
+            bg="linear-gradient(0deg, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0) 100%)"
+            height="100%"
+            w="100%"
+            pos="absolute"
+            zIndex={2}
+          />
+
+          <Image src={work.image} alt="obsidian" fill />
+        </GridItem>
+      ))}
     </Grid>
   )
 }

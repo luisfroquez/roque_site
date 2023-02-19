@@ -1,11 +1,11 @@
-import {
-  Center,
-  ColorMode,
-  Heading,
-  VStack
-} from '@chakra-ui/react'
+import { Center, ColorMode, Heading, VStack } from '@chakra-ui/react'
 import React from 'react'
-import { DARK_BG, LIGHT_BG } from 'core/utils/constants'
+import {
+  DARK_BG,
+  HOME_DARK_BG_GRADIENT,
+  HOME_LIGHT_BG_GRADIENT,
+  LIGHT_BG
+} from 'core/utils/constants'
 import WorkGrid from './WorkGrid'
 
 const Work = ({ colorMode }: { colorMode: ColorMode }) => {
@@ -26,6 +26,9 @@ const Work = ({ colorMode }: { colorMode: ColorMode }) => {
         border="2px"
         borderColor={colorMode === 'light' ? LIGHT_BG : DARK_BG}
         borderRadius={20}
+        bgGradient={
+          colorMode === 'light' ? HOME_LIGHT_BG_GRADIENT : HOME_DARK_BG_GRADIENT
+        }
       >
         <Heading fontSize="4xl" lineHeight="none">
           Ready to see a cool portfolio?
