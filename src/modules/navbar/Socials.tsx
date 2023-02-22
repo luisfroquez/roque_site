@@ -6,7 +6,7 @@ import Link from 'next/link'
 const Socials = ({ isLarge }: { isLarge: boolean }) => {
   const { colorMode } = useColorMode()
 
-  const display = isLarge ? 'flex' : 'none'
+  const display = isLarge ? 'flex' : 'flex'
 
   return (
     <>

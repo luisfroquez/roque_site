@@ -85,11 +85,11 @@ const Navbar = () => {
               <ZacataLogo />
             </Center>
             <HStack>
-              <HStack>
+              <HStack spacing={0}>
                 <ColorModeToggle />
                 <Socials isLarge={isLTmd} />
               </HStack>
-              {isLTmd ? (
+              {isLTmd && (
                 MenuItems.map((m, i) => (
                   <Link href={m.link} key={i}>
                     <Button
@@ -103,11 +103,13 @@ const Navbar = () => {
                     </Button>
                   </Link>
                 ))
-              ) : (
-                <Button variant="primary">
-                  <HiOutlineMenuAlt4 />
-                </Button>
-              )}
+              ) 
+              // : (
+              //   <Button variant="primary">
+              //     <HiOutlineMenuAlt4 />
+              //   </Button>
+              // )
+              }
             </HStack>
           </SlideIn>
         )}
