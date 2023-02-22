@@ -3,8 +3,10 @@ import {
   CenterProps,
   ColorMode,
   Flex,
+  Grid,
   Heading,
   HStack,
+  Stack,
   Text,
   VStack
 } from '@chakra-ui/react'
@@ -26,7 +28,6 @@ const texts = [
 ]
 
 const Home = ({ colorMode }: { colorMode: ColorMode }) => {
-
   const handleClickScroll = () => {
     const element = document.getElementById('about')
     if (element) {
@@ -40,7 +41,7 @@ const Home = ({ colorMode }: { colorMode: ColorMode }) => {
     w: '100%',
     h: '100%',
     borderRadius: 20,
-    fontSize: { base: '1.5rem', xl: '2.5rem' },
+    fontSize: { base: 'lg', xl: '2.5rem' },
     cursor: 'pointer',
     transition: '1s',
     _hover: { bg: colorMode === 'light' ? 'gray.100' : 'gray.900' }
@@ -141,29 +142,31 @@ const Home = ({ colorMode }: { colorMode: ColorMode }) => {
         </Flex>
       </SlideIn>
 
-      <HStack h="25%" w="100%">
-        <SlideIn direction="toLeft" delay={1}>
-          <Center
-            {...homeButtonsProps}
-            // onClick={handleClickScroll}
-          >
-            Get in touch
-          </Center>
-        </SlideIn>
-        <SlideIn direction="toLeft" delay={0.5}>
-          <Center
-            {...homeButtonsProps}
-            // onClick={handleClickScroll}
-          >
-            Resume
-          </Center>
-        </SlideIn>
+      <Stack w="100%" h="25%" direction={{ base: 'column', md: 'row' }}>
+        <HStack h="100%" w="100%">
+          <SlideIn direction="toLeft" delay={1}>
+            <Center
+              {...homeButtonsProps}
+              // onClick={handleClickScroll}
+            >
+              Get in touch
+            </Center>
+          </SlideIn>
+          <SlideIn direction="toLeft" delay={0.5}>
+            <Center
+              {...homeButtonsProps}
+              // onClick={handleClickScroll}
+            >
+              Resume
+            </Center>
+          </SlideIn>
+        </HStack>
         <SlideIn direction="toLeft">
           <Center {...homeButtonsProps} onClick={handleClickScroll}>
             <HiChevronDown />
           </Center>
         </SlideIn>
-      </HStack>
+      </Stack>
     </VStack>
   )
 }

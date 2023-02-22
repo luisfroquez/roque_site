@@ -18,7 +18,7 @@ const WorkGrid = ({ colorMode }: { colorMode: ColorMode }) => {
       {works.map((work, i) => (
         <GridItem
           key={i}
-          h={{ base: 280, md: 350, lg: 500 }}
+          h={{ base: 240, md: 350, lg: 500 }}
           p={4}
           display="flex"
           alignItems="stretch"
@@ -28,6 +28,7 @@ const WorkGrid = ({ colorMode }: { colorMode: ColorMode }) => {
           overflow="hidden"
           pos="relative"
           borderRadius={20}
+
           // border="2px"
           // borderColor={colorMode === 'light' ? LIGHT_BG : DARK_BG}
         >
@@ -53,7 +54,12 @@ const WorkGrid = ({ colorMode }: { colorMode: ColorMode }) => {
             zIndex={2}
           />
 
-          <Image src={work.image} alt="obsidian" fill />
+          <Image
+            src={work.image}
+            alt="obsidian"
+            fill
+            style={{objectFit:"cover"}}
+          />
         </GridItem>
       ))}
     </Grid>

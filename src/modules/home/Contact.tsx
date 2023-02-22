@@ -2,6 +2,7 @@ import {
   Box,
   Center,
   ColorMode,
+  Grid,
   Heading,
   useColorModeValue,
   VStack
@@ -122,10 +123,11 @@ const Contact = ({ colorMode }: { colorMode: ColorMode }) => {
     //     </Center>
     //   </Box>
     // </Center>
-    <Center as="div" id="work" w="100%" flexDir="row" gap={2}>
+    <Center as="div" id="work" w="100%" flexDir={{base:"column", md:"row"}} gap={2}>
       <Center
         w="100%"
         p={8}
+        pt={{base:40,md:8}}
         h="100%"
         border="2px"
         borderColor={colorMode === 'light' ? LIGHT_BG : DARK_BG}
@@ -138,7 +140,11 @@ const Contact = ({ colorMode }: { colorMode: ColorMode }) => {
           Feel free to contact me.
         </Heading>
       </Center>
-      <VStack w="100%">
+      <Grid
+        w="100%"
+        templateColumns={{ base: 'repeat(2, 1fr)', md: 'repeat(1, 1fr)' }}
+        gap={2}
+      >
         {links.map((link, i) => (
           <Center
             key={i}
@@ -146,7 +152,6 @@ const Contact = ({ colorMode }: { colorMode: ColorMode }) => {
             borderRadius={20}
             w="100%"
             h="100%"
-            // minW="12em"
             maxW="50vw"
             border="2px"
             borderColor={colorMode === 'light' ? LIGHT_BG : DARK_BG}
@@ -157,14 +162,14 @@ const Contact = ({ colorMode }: { colorMode: ColorMode }) => {
             transition="all 0.8s"
             textTransform="capitalize"
             cursor="pointer"
-            fontSize="4xl"
+            fontSize={{base:"xl", md:"4xl"}}
           >
             <a href={link.href} target="_blank" rel="noopener noreferrer">
               <Heading fontSize="inherit">{link.name}</Heading>
             </a>
           </Center>
         ))}
-      </VStack>
+      </Grid>
     </Center>
   )
 }
