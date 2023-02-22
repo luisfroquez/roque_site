@@ -123,7 +123,7 @@ const Contact = ({ colorMode }: { colorMode: ColorMode }) => {
     //     </Center>
     //   </Box>
     // </Center>
-    <Center as="div" id="work" w="100%" flexDir={{base:"column", md:"row"}} gap={2}>
+    <Center as="div" id="contact" w="100%" flexDir={{base:"column", md:"row"}} gap={2}>
       <Center
         w="100%"
         p={8}

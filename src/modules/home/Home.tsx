@@ -19,6 +19,7 @@ import {
 } from 'core/utils/constants'
 import { HiChevronDown } from 'react-icons/hi'
 import styles from 'core/styles/modules/home/home.module.css'
+import Link from 'next/link'
 
 const texts = [
   'Frontend developer',
@@ -30,6 +31,12 @@ const texts = [
 const Home = ({ colorMode }: { colorMode: ColorMode }) => {
   const handleClickScroll = () => {
     const element = document.getElementById('about')
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' })
+    }
+  }
+  const handleClickScrolltoContact = () => {
+    const element = document.getElementById('contact')
     if (element) {
       element.scrollIntoView({ behavior: 'smooth' })
     }
@@ -145,20 +152,22 @@ const Home = ({ colorMode }: { colorMode: ColorMode }) => {
       <Stack w="100%" h="25%" direction={{ base: 'column', md: 'row' }}>
         <HStack h="100%" w="100%">
           <SlideIn direction="toLeft" delay={1}>
-            <Center
-              {...homeButtonsProps}
-              // onClick={handleClickScroll}
-            >
+            <Center {...homeButtonsProps} onClick={handleClickScrolltoContact}>
               Get in touch
             </Center>
           </SlideIn>
           <SlideIn direction="toLeft" delay={0.5}>
-            <Center
-              {...homeButtonsProps}
-              // onClick={handleClickScroll}
+            <Link
+              href="https://www.notion.so/luisfroquez/Luis-Roque-0cf17f3a8fbc4bc5b1a8b2135ddeabe5?pvs=4"
+              target="_blank"
             >
-              Resume
-            </Center>
+              <Center
+                {...homeButtonsProps}
+                // onClick={handleClickScroll}
+              >
+                Resume
+              </Center>
+            </Link>
           </SlideIn>
         </HStack>
         <SlideIn direction="toLeft">
