@@ -92,7 +92,7 @@ const Home = ({ colorMode }: { colorMode: ColorMode }) => {
               {' '}
               I'm Luis.
             </Heading>
-            <Text as="div" fontSize="1rem" pt={2}>
+            <Text  fontSize="1rem" pt={2}>
               A cool frontend <strong>designveloper</strong> who loves
               minimalistic and modern UI design.
             </Text>
@@ -158,7 +158,7 @@ const Home = ({ colorMode }: { colorMode: ColorMode }) => {
           </SlideIn>
           <SlideIn direction="toLeft" delay={0.5}>
             <Link
-              href="https://www.notion.so/luisfroquez/Luis-Roque-0cf17f3a8fbc4bc5b1a8b2135ddeabe5?pvs=4"
+              href="https://read.cv/roque.dev"
               target="_blank"
             >
               <Center

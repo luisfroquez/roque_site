@@ -17,10 +17,9 @@ const Index = () => {
       <Home colorMode={colorMode} />
       <About />
       <ZacataStack colorMode={colorMode} />
-      <Quote colorMode={colorMode} />
       <Work colorMode={colorMode} />
-      <Contact colorMode={colorMode}/>
-     
+      <Contact colorMode={colorMode} />
+      <Quote colorMode={colorMode} />
     </>
   )
 }
